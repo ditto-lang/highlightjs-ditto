@@ -1,0 +1,25 @@
+{
+  "name": "highlightjs-ditto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ditto-lang/highlightjs-ditto.git"
+  },
+  "version": "0.0.1",
+  "description": "highlight.js syntax definition for ditto-lang",
+  "main": "src/languages/ditto.js",
+  "keywords": [
+    "ditto",
+    "ditto-lang",
+    "highlight.js",
+    "highlightjs",
+    "syntax"
+  ],
+  "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
+  "license": "MIT",
+  "devDependencies": {
+    "highlight.js": "^11.4.0",
+    "parcel": "^2.3.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}

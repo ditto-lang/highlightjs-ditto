@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>Kitchen sink</title>
+
+<link rel="stylesheet" href="../node_modules/highlight.js/styles/a11y-light.css" />
+<script type="module">
+import hljs from 'highlight.js/es/index.js';
+import ditto from '../src/languages/ditto.js';
+hljs.registerLanguage('ditto', ditto);
+hljs.highlightAll();
+</script>
+
+</head>
+<body>
+<pre class="ditto">
+<code>
+-- ditto module
+module Example exports (..);
+
+import (core) Maybe;
+import My.Module as MM (
+  my_thing
+);
+
+type Dunno;
+
+type Example = Example;
+
+type FooBarBaz(a, b) = 
+    | Foo
+    | Bar(a, b)
+    | Baz;
+
+foreign magic: (Int, a) -> Bool;
+
+example = Example;
+bar = Bar("", unit);
+five_int : Int = 5;
+five_float : Float = 5.0;
+five_string : String = "five";
+fives : Array(Int) = [5, 5, 5, 5, 5, 5];
+nada = unit;
+yes = true;
+no = false;
+
+</code>
+</pre>
+</body>
+</html>

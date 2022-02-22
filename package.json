@@ -11,7 +11,8 @@
   "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "check-fmt": "prettier --check '**/*.js'"
   },
   "devDependencies": {
     "highlight.js": "^11.4.0",

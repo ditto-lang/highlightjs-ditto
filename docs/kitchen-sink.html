@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kitchen sink</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css"
+    />
+    <style>
+      body {
+        background-color: #606c76;
+      }
+      code {
+        max-width: 400px;
+        margin: 50px auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre class="ditto">
+<code class="hljs language-ditto"><span class="hljs-comment">-- ditto module</span>
+<span class="hljs-keyword">module</span> Example <span class="hljs-keyword">exports</span> (<span class="hljs-symbol">..</span>);
+
+<span class="hljs-keyword">import</span> (core) Maybe;
+<span class="hljs-keyword">import</span> My.Module <span class="hljs-keyword">as</span> MM (
+  my_thing
+);
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Dunno</span>;
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Example</span> = <span class="hljs-title function_ invoke__">Example</span>;
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">FooBarBaz</span>(<span class="hljs-variable">a</span>, <span class="hljs-variable">b</span>) =
+    | <span class="hljs-title function_ invoke__">Foo</span>
+    | <span class="hljs-title function_ invoke__">Bar</span>(<span class="hljs-variable">a</span>, <span class="hljs-variable">b</span>)
+    | <span class="hljs-title function_ invoke__">Baz</span>;
+
+<span class="hljs-keyword">foreign</span> magic: (<span class="hljs-type">Int</span>, <span class="hljs-variable">a</span>) -&gt; <span class="hljs-type">Bool</span>;
+
+example = <span class="hljs-title function_ invoke__">Example</span>;
+bar = <span class="hljs-title function_ invoke__">Bar</span>(<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-literal">unit</span>);
+five_int : <span class="hljs-type">Int</span> = <span class="hljs-number">5</span>;
+five_float : <span class="hljs-type">Float</span> = <span class="hljs-number">5.0</span>;
+five_string : <span class="hljs-type">String</span> = <span class="hljs-string">&quot;five&quot;</span>;
+fives : <span class="hljs-type">Array</span>(<span class="hljs-type">Int</span>) = [<span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>];
+nada = <span class="hljs-literal">unit</span>;
+yes = <span class="hljs-literal">true</span>;
+no = <span class="hljs-literal">false</span>;</code>
+</pre>
+  </body>
+</html>

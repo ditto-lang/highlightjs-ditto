@@ -46,7 +46,7 @@ const CONSTRUCTOR_MODE = {
 };
 
 /** @type {import("highlight.js").LanguageFn} */
-export default function (hljs) {
+module.exports = function language(hljs) {
   const COMMENT = hljs.COMMENT("--", "$");
 
   /** @type {import("highlight.js").Mode} */
@@ -123,7 +123,7 @@ export default function (hljs) {
       // TODO operators?
     ],
   };
-}
+};
 
 // https://github.com/highlightjs/highlight.js/blob/main/src/lib/modes.js
 // https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html

@@ -8,6 +8,8 @@ const ditto = require("../src/languages/ditto.js");
 const hljs = require("highlight.js/lib");
 hljs.registerLanguage("ditto", ditto);
 
+const HLJS_VERSION = require("../package.json").devDependencies["highlight.js"];
+
 async function exists(path) {
   try {
     await fs.promises.access(path, fs.constants.F_OK);
@@ -65,7 +67,7 @@ function highlight(source, title) {
 <html>
 <head>
 <title>${title}</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/a11y-light.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/${HLJS_VERSION}/styles/a11y-light.min.css">
 <style>
 body {
   background-color: #606c76;

@@ -15,10 +15,10 @@
     "check-fmt": "prettier --check '**/*.js'"
   },
   "devDependencies": {
-    "highlight.js": "^11.4.0",
-    "jest": "^27.5.1",
-    "@types/jest": "^27.4.0",
-    "prettier": "^2.5.1"
+    "highlight.js": "11.5.0",
+    "jest": "27.5.1",
+    "@types/jest": "27.4.1",
+    "prettier": "2.5.1"
   },
   "jest": {}
 }

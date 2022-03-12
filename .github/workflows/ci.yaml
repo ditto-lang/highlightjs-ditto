@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version-file: .nvmrc
           #cache: "npm"   <-- need to commit a lockfile for this
       - run: npm install
       - run: npm run check-fmt

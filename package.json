@@ -9,7 +9,7 @@
   "main": "src/languages/ditto.js",
   "keywords": ["ditto", "ditto-lang", "highlight.js", "highlightjs", "syntax"],
   "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "scripts": {
     "test": "jest",
     "check-fmt": "prettier --check '**/*.js'"

@@ -114,6 +114,7 @@ example = Example;
 bar = Bar("", unit);
 five_int : Int = 5;
 five_float : Float = 5.0;
+five_thousand : Int = 5_000.0_0;
 five_string : String = "five";
 fives : Array(Int) = [5, 5, 5, 5, 5, 5];
 nada = unit;

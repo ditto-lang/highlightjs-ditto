@@ -45,6 +45,13 @@ const CONSTRUCTOR_MODE = {
   begin: PROPER_NAME_RE,
 };
 
+/** @type {import("highlight.js").Mode} */
+const NUMBER_MODE = {
+  scope: "number",
+  begin: "\\b\\d[\\d_]*(?:\\.\\d[\\d_]*)?",
+  relevance: 0,
+};
+
 /** @type {import("highlight.js").LanguageFn} */
 module.exports = function language(hljs) {
   const COMMENT = hljs.COMMENT("--", "$");
@@ -56,7 +63,7 @@ module.exports = function language(hljs) {
     // "strings"
     hljs.QUOTE_STRING_MODE,
     // Ints and Floats
-    hljs.NUMBER_MODE,
+    NUMBER_MODE,
   ];
 
   const EXPRESSION_MODE = {

@@ -89,8 +89,17 @@ code {
 `;
 }
 
-test("kitchen-sink", async () => {
-  const source = `
+function testHighlighting(slug, title, source) {
+  test(slug, async () => {
+    const highlighted = highlight(source, title);
+    await expect(highlighted).toMatchHtmlSnapshot();
+  });
+}
+
+testHighlighting(
+  "kitchen-sink",
+  "Kitchen sink",
+  `
 -- ditto module
 module Example exports (..);
 
@@ -120,7 +129,37 @@ fives : Array(Int) = [5, 5, 5, 5, 5, 5];
 nada = unit;
 yes = true;
 no = false;
-`;
-  const highlighted = highlight(source, "Kitchen sink");
-  await expect(highlighted).toMatchHtmlSnapshot();
-});
+`
+);
+
+testHighlighting(
+  "teaser",
+  "Teaser",
+  `
+module Hello.Ditto exports (..);
+
+import (core) String;
+import (node-readline) Readline (question);
+import (js-console) Console;
+
+type Greeting =
+  | Generic
+  | Name(String);
+
+greeting_to_string = (greeting: Greeting): String ->
+  match greeting with
+  | Generic -> "Hello there!"
+  | Name(name) -> "Hello there, \${name}!";
+
+main = do {
+  response <- question("What's your name?");
+  let greeting =
+    if String.is_empty(response) then
+      Generic
+    else
+      Name(response);
+
+  greeting_to_string(greeting) |> Console.log
+};
+`
+);

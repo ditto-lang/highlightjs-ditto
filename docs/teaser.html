@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teaser</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/a11y-light.min.css"
+    />
+    <style>
+      body {
+        background-color: #606c76;
+      }
+      code {
+        max-width: 400px;
+        margin: 50px auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre class="ditto">
+<code class="hljs language-ditto"><span class="hljs-keyword">module</span> Hello.Ditto <span class="hljs-keyword">exports</span> (<span class="hljs-symbol">..</span>);
+
+<span class="hljs-keyword">import</span> (core) String;
+<span class="hljs-keyword">import</span> (node-readline) Readline (question);
+<span class="hljs-keyword">import</span> (js-console) Console;
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Greeting</span> =
+  | <span class="hljs-title function_ invoke__">Generic</span>
+  | <span class="hljs-title function_ invoke__">Name</span>(<span class="hljs-title function_ invoke__">String</span>);
+
+greeting_to_string = (greeting: <span class="hljs-title function_ invoke__">Greeting</span>): <span class="hljs-title function_ invoke__">String</span> -&gt;
+  match greeting with
+  | <span class="hljs-title function_ invoke__">Generic</span> -&gt; <span class="hljs-string">&quot;Hello there!&quot;</span>
+  | <span class="hljs-title function_ invoke__">Name</span>(name) -&gt; <span class="hljs-string">&quot;Hello there, ${name}!&quot;</span>;
+
+main = do {
+  response &lt;- question(<span class="hljs-string">&quot;What&#x27;s your name?&quot;</span>);
+  let greeting =
+    if <span class="hljs-title function_ invoke__">String</span>.is_empty(response) then
+      <span class="hljs-title function_ invoke__">Generic</span>
+    else
+      <span class="hljs-title function_ invoke__">Name</span>(response);
+
+  greeting_to_string(greeting) |&gt; Console.log
+};</code>
+</pre>
+  </body>
+</html>

@@ -29,4 +29,4 @@ jobs:
           node-version-file: .nvmrc
           #cache: "npm"   <-- need to commit a lockfile for this
       - run: npm install
-      - run: npm run check-fmt
+      - run: npm run fmt:check

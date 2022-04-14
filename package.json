@@ -7,12 +7,20 @@
   "version": "0.0.1",
   "description": "highlight.js syntax definition for ditto-lang",
   "main": "src/languages/ditto.js",
-  "keywords": ["ditto", "ditto-lang", "highlight.js", "highlightjs", "syntax"],
+  "keywords": [
+    "ditto",
+    "ditto-lang",
+    "highlight.js",
+    "highlightjs",
+    "syntax"
+  ],
   "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
   "license": "BSD-3-Clause",
   "scripts": {
     "test": "jest",
-    "check-fmt": "prettier --check '**/*.js'"
+    "dev": "jest --watch -u",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check ."
   },
   "devDependencies": {
     "highlight.js": "11.5.0",

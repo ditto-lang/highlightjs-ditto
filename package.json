@@ -6,7 +6,9 @@
   },
   "version": "0.0.1",
   "description": "highlight.js syntax definition for ditto-lang",
+  "type": "module",
   "main": "src/languages/ditto.js",
+  "types": "src/languages/ditto.d.ts",
   "keywords": [
     "ditto",
     "ditto-lang",
@@ -17,7 +19,7 @@
   "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
   "license": "BSD-3-Clause",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "dev": "jest --watch -u",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check ."

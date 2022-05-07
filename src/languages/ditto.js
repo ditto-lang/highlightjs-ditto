@@ -53,7 +53,7 @@ const NUMBER_MODE = {
 };
 
 /** @type {import("highlight.js").LanguageFn} */
-module.exports = function language(hljs) {
+export default function language(hljs) {
   const COMMENT = hljs.COMMENT("--", "$");
 
   /** @type {import("highlight.js").Mode} */
@@ -130,7 +130,7 @@ module.exports = function language(hljs) {
       // TODO operators?
     ],
   };
-};
+}
 
 // https://github.com/highlightjs/highlight.js/blob/main/src/lib/modes.js
 // https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html

@@ -1,14 +1,16 @@
 /// <reference types="jest" />
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
-const prettier = require("prettier");
+import prettier from "prettier";
+import hljs from "highlight.js";
 
-const ditto = require("../src/languages/ditto.js");
-const hljs = require("highlight.js/lib");
+import ditto from "../src/languages/ditto.js";
+import packageJson from "../package.json";
+
 hljs.registerLanguage("ditto", ditto);
 
-const HLJS_VERSION = require("../package.json").devDependencies["highlight.js"];
+const HLJS_VERSION = packageJson.devDependencies["highlight.js"];
 
 async function exists(path) {
   try {
